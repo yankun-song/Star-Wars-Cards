@@ -1,0 +1,161 @@
+/* reset default styles */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Oswald&display=swap');
+$primaryColor: #959595;
+$secondaryColor: lighten(lighten(lighten($primaryColor,10), 10),10);
+$starWarsGold: darken(#FFE81F, 10);
+
+html {
+  font-size: 1.5vw;
+}
+
+body{
+  background-image: url(https://media.istockphoto.com/photos/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-picture-id971578384?b=1&k=20&m=971578384&s=170667a&w=0&h=Rpn3K4UC9rKyFjYj4_zXr7eR57nEn2iS1GFcmXYs3iI=);
+}
+
+header {
+  display: flex;
+  font-family: 'Oswald', sans-serif;
+  justify-content: center;
+  color: $starWarsGold;
+}
+
+h1 {
+  margin:0;
+}
+
+body {
+
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* cards container */
+.charContainer {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(280px, 1fr));
+}
+
+/* character card container */
+.charCard {
+  background-color:$primaryColor;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 5px;
+  color: $secondaryColor;
+  background-image: url(https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2019/12/20/Pictures/_0745b0ec-231b-11ea-8c10-7db3e225203f.jpg);
+  background-size: cover;
+}
+
+/* character card header */
+.charHeadContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 1em 1em auto;
+}
+
+.charHeadContainer div {
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+
+.charHeadContainer h2 {
+  font-family: 'Cabin', 'sans-serif';
+  font-weight: bolder;
+  color: lighten($secondaryColor, 20);
+  margin-bottom: 0;
+  margin-top: 0;
+  /* height: 100px; */
+}
+
+.charHeadContainer .favIcon {
+  align-self: flex-start;
+  color: $starWarsGold;
+}
+
+/* character additional details - films */
+.charAddlDetail {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.charFilmsList {
+  margin-top: 0;
+}
+
+.charFilm {
+  margin-left: 0.5rem;
+}
+
+.charDetailsList{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Cabin', sans-serif;
+  margin-left: 1em;
+}
+
+.charDetailsList li{ 
+  /* margin:5px; */
+}
+.charBtnOptions{
+  margin: 0 1em 1em;
+}
+.primaryButton{
+  border-radius: 10%;
+  background-color: $starWarsGold;
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-family: 'Cabin', sans-serif;
+  margin-right: 0.25em;
+}
+
+.primaryButton:hover {
+  background-color: white;
+  color: $starWarsGold;
+  font-weight: bold;
+  zoom: 102%;
+}
+
+.secondaryButton{
+  border-radius: 10%;
+  background-color: white;
+  color: $starWarsGold;
+  font-family: 'Cabin', sans-serif;
+  border: none;
+}
+
+.secondaryButton:hover {
+  background-color: $starWarsGold;
+  color: white;
+  font-weight: bold;
+  zoom: 102%;
+}
+
+@media screen and (max-width:1200px) {
+  .charContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+  .charCard {
+    background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2014/10/jedi_1851-1536x820.jpg);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .charContainer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
+  }
+  .charCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://lumiere-a.akamaihd.net/v1/images/607598d0230e6a00018e21b2-image_354b1b56.jpeg?region=0%2C48%2C1536%2C768&width=960);
+  }
+}
